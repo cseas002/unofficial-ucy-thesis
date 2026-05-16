@@ -1,0 +1,4 @@
+*.pdf
+.packages
+.DS_Store
+.vscode
