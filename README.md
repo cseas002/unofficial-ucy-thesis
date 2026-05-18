@@ -57,4 +57,4 @@ See `template/thesis.typ` for a full example (bilingual metadata, glossarium abb
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). Portions are derived from [kthesis](https://github.com/RafDevX/kthesis-typst) by Rafael Mealha Fino Serra e Oliveira (MIT / MIT-0).
