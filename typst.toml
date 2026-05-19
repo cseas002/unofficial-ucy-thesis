@@ -17,11 +17,6 @@ exclude = [
   "/template/*.pdf",
 ]
 
-[dependencies]
-linguify = "0.5.0"
-headcount = "0.1.0"
-glossarium = "0.5.10"
-
 [template]
 path = "template"
 entrypoint = "thesis.typ"
