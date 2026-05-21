@@ -51,7 +51,24 @@ See `template/thesis.typ` for a full example (bilingual metadata, glossarium abb
 - List of abbreviations via [glossarium](https://typst.app/universe/package/glossarium)
 - Chapter-local figure/table numbering ([headcount](https://typst.app/universe/package/headcount))
 - Optional appendices with letter numbering
-- UCY logo presets (`general`, `cs`, `general-text`) or custom `logo-image`
+- Cover logo slot via `logo-image` (logos are **not** bundled; see below)
+
+## University logos (not included)
+
+This package **does not redistribute** University of Cyprus logos or other UCY trademark assets.
+
+Public [ADE layout guidelines](https://www.cs.ucy.ac.cy/index.php/el/education/undergrad/prodiagrafes-ade) describe cover text (university and department names, white cover, blue lettering) but do **not** publish a license allowing third parties to republish official logo files in open-source packages. Treat UCY logos as **trademarked**; obtain files and permission from the University (e.g. your department or communications office) before use.
+
+Add a logo you are allowed to use:
+
+```typ
+#show: ucy-thesis.with(
+  logo-image: image("ucy-logo.svg"), // or a project-relative path string
+  // ...
+)
+```
+
+Until you set `logo-image`, the cover shows a neutral placeholder box.
 
 ## Development
 

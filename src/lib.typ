@@ -68,10 +68,9 @@
       last-names: "Name",
     ),
   ),
-  /// Bundled logo preset: `"general"` (default), `"cs"`, or `"general-text"`.
-  /// Use `logo-image` for a custom image instead.
+  /// Reserved for future presets; ignored unless `logo-image` is set.
   logo: "general",
-  /// Custom logo: file path string or `image(...)` content. Overrides `logo`.
+  /// Cover logo (not bundled): file path or `image(...)`. You must supply a logo you may use.
   logo-image: none,
   /// Submission date (month and year shown on cover pages).
   doc-date: datetime.today(),

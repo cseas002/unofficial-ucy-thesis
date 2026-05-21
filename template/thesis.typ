@@ -59,10 +59,7 @@
       last-names: "Bob",
     ),
   ),
-  // logo: "general",       // default — ucy-general-logo.svg
-  // logo: "cs",             // ucy-cs-logo.jpg
-  // logo: "general-text",   // ucy-general-logo-text.jpg
-  // logo-image: image("my-logo.png"),  // custom upload
+  // logo-image: image("ucy-logo.svg"),  // supply your own UCY logo (see README)
   doc-date: datetime(year: 2026, month: 5, day: 16),
   acknowledgements: include "content/acknowledgements.typ",
   glossary: print-glossary(acronyms),

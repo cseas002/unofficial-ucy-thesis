@@ -36,24 +36,38 @@
   }
 }
 
-#let resolve-logo(logo: "general", logo-image: none) = {
+/// Placeholder shown when no `logo-image` is supplied (UCY logos are not bundled).
+#let logo-placeholder(lang: "en") = {
+  box(
+    width: 70%,
+    height: 4cm,
+    stroke: 0.75pt + gray,
+    inset: 1em,
+    align(center + horizon)[
+      #text(size: 11pt, fill: gray.darken(30%))[
+        #if lang == "el" [
+          Λογότυπο Πανεπιστημίου Κύπρου
+        ] else [
+          University of Cyprus logo
+        ]
+      ]
+      #v(0.4em)
+      #text(size: 9pt, fill: gray)[Add your own file via `logo-image` (see README).]
+    ],
+  )
+}
+
+/// Cover logo: pass `logo-image` with an image you are allowed to use. Preset `logo` is ignored.
+#let resolve-logo(logo: "general", logo-image: none, lang: none) = context {
+  let lang = if lang != none { lang } else { ucy-lang.get() }
   if logo-image != none {
     if type(logo-image) == str {
       image(logo-image)
     } else {
       logo-image
     }
-  } else if logo == "general" {
-    image("assets/ucy-general-logo.svg")
-  } else if logo == "cs" {
-    image("assets/ucy-cs-logo.jpg")
-  } else if logo == "general-text" {
-    image("assets/ucy-general-logo-text.jpg")
   } else {
-    panic(
-      "logo must be \"general\", \"cs\", or \"general-text\"; "
-        + "pass a custom image via logo-image",
-    )
+    logo-placeholder(lang: lang)
   }
 }
 
